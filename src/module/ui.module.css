@@ -1,7 +1,18 @@
 .auth {
-  background-image: url("../shared/assets/auth-liquid.png");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .auth {
+    background-color: white;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .auth {
+    background-image: url("../shared/assets/auth-liquid.png");
+  }
 }
