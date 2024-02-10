@@ -8,7 +8,7 @@ const RRD = () => {
     <Router>
       <Routes>
         <Route path="/" element={<SignIn />} />
-        <Route path="/" element={<CreateAccount />} />
+        <Route path="/auth/create-account" element={<CreateAccount />} />
       </Routes>
     </Router>
   );
