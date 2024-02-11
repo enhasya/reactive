@@ -13,7 +13,7 @@ const ReactiveApp = () => {
           intuitive design to create a vibrant and engaging social ecosystem.
         </h2>
       </div>
-      <div className="flex flex-col lg:flex-row w-full h-auto gap-4 items-center">
+      <div className="flex flex-row w-full h-auto gap-4 items-center mt-4 lg:mt-0">
         <button className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full lg:w-auto items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-0">
           <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
             Learn More
