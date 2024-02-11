@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-const { default: SignIn } = require("../pages/auth/signIn");
-const { default: CreateAccount } = require("../pages/auth/createAccount");
+const { default: SignIn } = require("../pages/auth/sign-in");
+const { default: CreateAccount } = require("../pages/auth/create-account");
 
 const RRD = () => {
   return (
