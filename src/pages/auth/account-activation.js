@@ -2,11 +2,8 @@ import React from "react";
 import css from "../../module/ui.module.css";
 
 const {
-  default: ArrowLeft,
-} = require("../../shared/icons/arrow-left-sm-white.svg");
-const {
   default: Creating,
-} = require("../../shared/icons/arrow-rotate-right-01-black.svg");
+} = require("../../shared/icons/user-profile-circle-black.svg");
 
 const BirthConfirmation = () => {
   return (
@@ -15,31 +12,21 @@ const BirthConfirmation = () => {
     >
       <div className="bg-white flex flex-col items-start justify-between w-full lg:w-[360px] h-auto lg:h-[560px] p-0 lg:p-8 ring-0 lg:ring-1 lg:ring-black/10 rounded-lg mt-0">
         <div className="flex flex-row gap-4 items-center justify-start w-full">
-          <a
-            href="/auth/create-account"
-            className="bg-black/95 hover:bg-black/75 transition-all p-2 rounded-full"
-          >
-            <img src={ArrowLeft} width="20" height="20" alt="ArrowLeft" />
-          </a>
           <p className="text-black font-bold text-lg tracking-tight leading-relaxed mt-0">
-            Account Confirmation
+            Creation is in Progress
           </p>
         </div>
-        <div className="flex flex-col w-full items-center justify-center">
+        <div className="flex flex-col w-full items-center justify-center mt-8 lg:mt-0">
           <img
-            className="animate-spin"
+            className="animate-none lg:animate-ping"
             src={Creating}
-            width="48"
-            height="48"
-            alt="Your Name"
+            width="36"
+            height="36"
+            alt="Creating"
           />
-          <img
-            className="animate-spin"
-            src={Creating}
-            width="48"
-            height="48"
-            alt="Your Name"
-          />
+          <p className="text-black font-medium text-xs text-center tracking-tight leading-relaxed mt-8">
+            Take a break for a moment while we creating your account
+          </p>
         </div>
         <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-4 lg:mt-0">
           By creating an account, you agree to our{" "}

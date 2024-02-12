@@ -1,6 +1,7 @@
 import React from "react";
 import css from "../../module/ui.module.css";
 
+const { default: ReactiveApp } = require("../auth/reactive-app");
 const {
   default: ArrowLeft,
 } = require("../../shared/icons/arrow-left-sm-white.svg");
@@ -19,6 +20,7 @@ const BirthConfirmation = () => {
     <main
       className={`${css.auth} flex flex-col lg:flex-row w-full h-auto lg:h-screen items-center justify-center p-8 lg:p-0`}
     >
+      <ReactiveApp />
       <div className="bg-white flex flex-col items-start justify-between w-full lg:w-[360px] h-auto lg:h-[560px] p-0 lg:p-8 ring-0 lg:ring-1 lg:ring-black/10 rounded-lg mt-0">
         <div className="flex flex-row gap-4 items-center justify-start w-full">
           <a
@@ -48,7 +50,10 @@ const BirthConfirmation = () => {
               placeholder="Birth Date"
             />
           </div>
-          <a href="/auth/account-activation" className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
+          <a
+            href="/auth/account-activation"
+            className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4"
+          >
             <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">
               Create Reactive Account
             </p>
