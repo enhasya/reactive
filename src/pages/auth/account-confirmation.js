@@ -15,7 +15,7 @@ const {
   default: Create,
 } = require("../../shared/icons/arrow-right-sm-white.svg");
 
-const BirthConfirmation = () => {
+const AccountConfirmation = () => {
   return (
     <main
       className={`${css.auth} flex flex-col lg:flex-row w-full h-auto lg:h-screen items-center justify-center p-8 lg:p-0`}
@@ -50,15 +50,12 @@ const BirthConfirmation = () => {
               placeholder="Birth Date"
             />
           </div>
-          <a
-            href="/auth/account-activation"
-            className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4"
-          >
+          <button className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
             <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">
               Create Reactive Account
             </p>
             <img src={Create} width="14" height="14" alt="Create" />
-          </a>
+          </button>
         </form>
         <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-4 lg:mt-0">
           By creating an account, you agree to our{" "}
@@ -76,4 +73,4 @@ const BirthConfirmation = () => {
   );
 };
 
-export default BirthConfirmation;
+export default AccountConfirmation;
