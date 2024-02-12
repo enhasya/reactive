@@ -12,8 +12,8 @@ const {
   default: Password,
 } = require("../../shared/icons/lock-open-02-black.svg");
 const {
-  default: Authenticate,
-} = require("../../shared/icons/logout-02-white.svg");
+  default: Next,
+} = require("../../shared/icons/arrow-right-sm-white.svg");
 
 const CreateAccount = () => {
   return (
@@ -62,10 +62,10 @@ const CreateAccount = () => {
             href="/auth/account-confirmation"
             className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4"
           >
-            <img src={Authenticate} width="14" height="14" alt="Create" />
             <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">
               Next
             </p>
+            <img src={Next} width="14" height="14" alt="Next" />
           </a>
         </form>
         <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-4 lg:mt-0">
