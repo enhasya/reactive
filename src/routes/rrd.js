@@ -5,6 +5,9 @@ const { default: CreateAccount } = require("../pages/auth/create-account");
 const {
   default: AccountConfirmation,
 } = require("../pages/auth/account-confirmation");
+const {
+  default: AccountActivation,
+} = require("../pages/auth/account-activation");
 
 const RRD = () => {
   return (
@@ -15,6 +18,10 @@ const RRD = () => {
         <Route
           path="/auth/account-confirmation"
           element={<AccountConfirmation />}
+        />
+        <Route
+          path="/auth/account-activation"
+          element={<AccountActivation />}
         />
       </Routes>
     </Router>
