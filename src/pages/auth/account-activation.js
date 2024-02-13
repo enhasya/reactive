@@ -13,7 +13,7 @@ const AccountActivation = () => {
       <div className="bg-white flex flex-col items-start justify-between w-full lg:w-[360px] h-auto lg:h-[560px] p-0 lg:p-8 ring-0 lg:ring-1 lg:ring-black/10 rounded-lg mt-0">
         <div className="flex flex-row gap-4 items-center justify-start w-full">
           <p className="text-black font-bold text-lg tracking-tight leading-relaxed mt-0">
-            Creation is in Progress
+            Create Account
           </p>
         </div>
         <div className="flex flex-col w-full items-center justify-center mt-8 lg:mt-0">

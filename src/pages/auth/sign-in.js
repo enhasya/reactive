@@ -20,7 +20,7 @@ const SignIn = () => {
       <ReactiveApp />
       <div className="bg-white flex flex-col items-start justify-between w-full lg:w-[360px] h-auto lg:h-[560px] p-0 lg:p-8 ring-0 lg:ring-1 lg:ring-black/10 rounded-none lg:rounded-r-lg mt-8 lg:mt-0">
         <p className="text-black font-bold text-lg tracking-tight leading-relaxed mt-0">
-          Sign In to Reactive
+          Sign In to REACTIVE
         </p>
         <form className="flex flex-col w-full">
           <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
@@ -42,12 +42,12 @@ const SignIn = () => {
           <button className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
             <img src={Authenticate} width="14" height="14" alt="Authenticate" />
             <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">
-              Authenticate to Reactive
+              Authenticate
             </p>
           </button>
           <hr width="full" className="mt-8" />
           <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-8">
-            Join Reactive today!{" "}
+            Join REACTIVE today!{" "}
             <a
               href="/auth/create"
               className="font-bold text-blue-600 hover:underline"

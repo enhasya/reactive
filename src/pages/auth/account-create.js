@@ -30,7 +30,7 @@ const AccountCreate = () => {
             <img src={ArrowLeft} width="20" height="20" alt="ArrowLeft" />
           </a>
           <p className="text-black font-bold text-lg tracking-tight leading-relaxed mt-0">
-            Reactive Account Creation
+            Create Account
           </p>
         </div>
         <form className="flex flex-col w-full">

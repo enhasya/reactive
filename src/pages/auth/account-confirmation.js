@@ -30,7 +30,7 @@ const AccountConfirmation = () => {
             <img src={ArrowLeft} width="20" height="20" alt="ArrowLeft" />
           </a>
           <p className="text-black font-bold text-lg tracking-tight leading-relaxed mt-0">
-            Account Confirmation
+            Create Account
           </p>
         </div>
         <form className="flex flex-col w-full">
@@ -55,7 +55,7 @@ const AccountConfirmation = () => {
             className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4"
           >
             <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">
-              Create Reactive Account
+              Create Account
             </p>
             <img src={Create} width="14" height="14" alt="Create" />
           </a>
