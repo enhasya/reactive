@@ -2,12 +2,12 @@ import React from "react";
 
 const {
   default: LearnMore,
-} = require("../../shared/icons/file-05-white.svg");
+} = require("../shared/icons/file-05-white.svg");
 const {
   default: YourData,
-} = require("../../shared/icons/shield-check-white.svg");
+} = require("../shared/icons/shield-check-white.svg");
 
-const ReactiveApp = () => {
+const Reactive = () => {
   return (
     <div className="bg-transparent lg:bg-black/5 backdrop-blur-lg flex flex-col w-full items-start justify-between lg:w-[360px] h-auto lg:h-[560px] p-0 lg:p-8 ring-0 lg:ring-1 lg:ring-black/10 rounded-none lg:rounded-l-lg">
       <div className="flex flex-col w-full h-auto gap-0 items-start">
@@ -43,4 +43,4 @@ const ReactiveApp = () => {
   );
 };
 
-export default ReactiveApp;
+export default Reactive;
