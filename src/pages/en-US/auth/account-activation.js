@@ -1,9 +1,9 @@
 import React from "react";
 
-const { default: LayoutAuth } = require("../../layouts/auth");
+const { default: LayoutAuth } = require("../../../layouts/auth");
 const {
   default: Creating,
-} = require("../../shared/icons/user-profile-circle-black.svg");
+} = require("../../../shared/icons/user-profile-circle-black.svg");
 
 const AccountActivation = () => {
   return (

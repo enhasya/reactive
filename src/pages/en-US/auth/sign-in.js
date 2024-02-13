@@ -1,15 +1,15 @@
 import React from "react";
 
-const { default: LayoutAuth } = require("../../layouts/auth");
+const { default: LayoutAuth } = require("../../../layouts/auth");
 const {
   default: Username,
-} = require("../../shared/icons/user-profile-03-black.svg");
+} = require("../../../shared/icons/user-profile-03-black.svg");
 const {
   default: Password,
-} = require("../../shared/icons/lock-open-02-black.svg");
+} = require("../../../shared/icons/lock-open-02-black.svg");
 const {
   default: Authenticate,
-} = require("../../shared/icons/logout-02-white.svg");
+} = require("../../../shared/icons/logout-02-white.svg");
 
 const SignIn = () => {
   return (
@@ -44,7 +44,7 @@ const SignIn = () => {
         <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-8">
           Join REACTIVE today!{" "}
           <a
-            href="/auth/create"
+            href="/en-US/auth/create"
             className="font-bold text-blue-600 hover:underline"
           >
             Create new Account

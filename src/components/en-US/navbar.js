@@ -1,26 +1,26 @@
 import React from "react";
 
-const { default: Search } = require("../shared/icons/search-01-black.svg");
-const { default: Explore } = require("../shared/icons/globe-02-black.svg");
+const { default: Search } = require("../../shared/icons/search-01-black.svg");
+const { default: Explore } = require("../../shared/icons/globe-02-black.svg");
 const {
   default: Notifications,
-} = require("../shared/icons/notification-box-black.svg");
+} = require("../../shared/icons/notification-box-black.svg");
 const {
   default: Messages,
-} = require("../shared/icons/message-chat-01-black.svg");
+} = require("../../shared/icons/message-chat-01-black.svg");
 const {
   default: Profile,
-} = require("../shared/icons/user-profile-circle-black.svg");
+} = require("../../shared/icons/user-profile-circle-black.svg");
 const {
   default: Analytics,
-} = require("../shared/icons/line-chart-up-02-black.svg");
+} = require("../../shared/icons/line-chart-up-02-black.svg");
 const {
   default: Account,
-} = require("../shared/icons/user-profile-03-black.svg");
-const { default: Settings } = require("../shared/icons/gear-black.svg");
+} = require("../../shared/icons/user-profile-03-black.svg");
+const { default: Settings } = require("../../shared/icons/gear-black.svg");
 const {
   default: ChevronDown,
-} = require("../shared/icons/chevron-down-black.svg");
+} = require("../../shared/icons/chevron-down-black.svg");
 
 const Navbar = () => {
   return (

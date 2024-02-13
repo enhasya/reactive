@@ -1,7 +1,7 @@
 import React from "react";
 import css from "../modules/ui.module.css";
 
-const { default: Reactive } = require("../components/reactive");
+const { default: Reactive } = require("../components/en-US/reactive");
 
 const LayoutAuth = ({ children }) => {
   return (

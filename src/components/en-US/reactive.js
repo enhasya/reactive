@@ -2,10 +2,10 @@ import React from "react";
 
 const {
   default: LearnMore,
-} = require("../shared/icons/file-05-white.svg");
+} = require("../../shared/icons/file-05-white.svg");
 const {
   default: YourData,
-} = require("../shared/icons/shield-check-white.svg");
+} = require("../../shared/icons/shield-check-white.svg");
 
 const Reactive = () => {
   return (

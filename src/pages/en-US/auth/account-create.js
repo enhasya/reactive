@@ -1,25 +1,25 @@
 import React from "react";
 
-const { default: LayoutAuth } = require("../../layouts/auth");
+const { default: LayoutAuth } = require("../../../layouts/auth");
 const {
   default: ArrowLeft,
-} = require("../../shared/icons/arrow-left-sm-white.svg");
+} = require("../../../shared/icons/arrow-left-sm-white.svg");
 const {
-  default: YourName,
-} = require("../../shared/icons/user-profile-03-black.svg");
+  default: Username,
+} = require("../../../shared/icons/user-profile-03-black.svg");
 const {
-  default: BirthDate,
-} = require("../../shared/icons/calendar-02-black.svg");
+  default: Password,
+} = require("../../../shared/icons/lock-open-02-black.svg");
 const {
-  default: Create,
-} = require("../../shared/icons/arrow-right-sm-white.svg");
+  default: Next,
+} = require("../../../shared/icons/arrow-right-sm-white.svg");
 
-const AccountConfirmation = () => {
+const AccountCreate = () => {
   return (
     <LayoutAuth>
       <div className="flex flex-row gap-4 items-center justify-start w-full">
         <a
-          href="/auth/create-account"
+          href="/"
           className="bg-black/95 hover:bg-black/75 transition-all p-2 rounded-full"
         >
           <img src={ArrowLeft} width="20" height="20" alt="ArrowLeft" />
@@ -30,29 +30,37 @@ const AccountConfirmation = () => {
       </div>
       <form className="flex flex-col w-full">
         <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
-          <img src={YourName} width="14" height="14" alt="Your Name" />
+          <img src={Username} width="14" height="14" alt="Username" />
           <input
             className="bg-transparent outline-none w-full text-black/80 font-medium text-xs tracking-tight"
             type="text"
-            placeholder="Your Name"
+            placeholder="Username"
           />
         </div>
         <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
-          <img src={BirthDate} width="14" height="14" alt="Your Name" />
+          <img src={Password} width="14" height="14" alt="Password" />
           <input
             className="bg-transparent outline-none w-full text-black/80 font-medium text-xs tracking-tight"
-            type="date"
-            placeholder="Birth Date"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
+          <img src={Password} width="14" height="14" alt="ConfirmPassword" />
+          <input
+            className="bg-transparent outline-none w-full text-black/80 font-medium text-xs tracking-tight"
+            type="password"
+            placeholder="Confirm Password"
           />
         </div>
         <a
-          href="/auth/activation"
+          href="/en-US/auth/confirmation"
           className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4"
         >
           <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">
-            Create Account
+            Next
           </p>
-          <img src={Create} width="14" height="14" alt="Create" />
+          <img src={Next} width="14" height="14" alt="Next" />
         </a>
       </form>
       <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-4 lg:mt-0">
@@ -70,4 +78,4 @@ const AccountConfirmation = () => {
   );
 };
 
-export default AccountConfirmation;
+export default AccountCreate;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const { default: LayoutApp } = require("../../layouts/app");
+const { default: LayoutApp } = require("../../../layouts/app");
 
 const Dashboard = () => {
   return (
