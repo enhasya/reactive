@@ -7,7 +7,7 @@ const {
 } = require("../../shared/icons/arrow-left-sm-white.svg");
 const {
   default: YourName,
-} = require("../../shared/icons/user-profile-circle-black.svg");
+} = require("../../shared/icons/user-profile-03-black.svg");
 const {
   default: BirthDate,
 } = require("../../shared/icons/calendar-02-black.svg");
