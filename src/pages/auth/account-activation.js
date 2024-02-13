@@ -1,5 +1,4 @@
 import React from "react";
-import css from "../../modules/ui.module.css";
 
 const { default: LayoutAuth } = require("../../layouts/auth");
 const {

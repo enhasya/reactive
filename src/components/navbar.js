@@ -24,7 +24,7 @@ const {
 
 const Navbar = () => {
   return (
-    <nav className="bg-white flex flex-col lg:flex-row gap-2 items-center justify-between w-full h-auto p-4">
+    <nav className="bg-white flex flex-col lg:flex-row gap-2 items-center justify-between w-full h-auto p-8 lg:p-4">
       <div className="bg-black/5 transition-all flex lg:hidden flex-row gap-4 w-full lg:w-[20%] items-center justify-center p-2 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-0">
         <img src={Search} width="14" height="14" alt="Search" />
         <input
@@ -78,6 +78,7 @@ const Navbar = () => {
           <p className="text-black font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
             Analytics
           </p>
+          <img className="hidden lg:flex" src={ChevronDown} width="14" height="14" alt="ChevronDown" />
         </button>
         <div className="flex flex-row gap-2 items-center justify-between lg:justify-end w-full lg:w-auto">
           <button className="bg-transparent lg:bg-black/5 transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2">
@@ -85,13 +86,14 @@ const Navbar = () => {
             <p className="text-black font-bold text-xs text-center tracking-tight leading-relaxed mt-0">
               Ras M.
             </p>
+            <img className="hidden lg:flex" src={ChevronDown} width="14" height="14" alt="ChevronDown" />
           </button>
           <button className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2">
             <img src={Settings} width="14" height="14" alt="Settings" />
             <p className="text-black font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Settings
             </p>
-            <img src={ChevronDown} width="14" height="14" alt="ChevronDown" />
+            <img className="hidden lg:flex" src={ChevronDown} width="14" height="14" alt="ChevronDown" />
           </button>
         </div>
       </div>
