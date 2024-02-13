@@ -19,7 +19,7 @@ const AccountConfirmation = () => {
     <LayoutAuth>
       <div className="flex flex-row gap-4 items-center justify-start w-full">
         <a
-          href="/auth/create-account"
+          href="/en-US/auth/create"
           className="bg-black/95 hover:bg-black/75 transition-all p-2 rounded-full"
         >
           <img src={ArrowLeft} width="20" height="20" alt="ArrowLeft" />
