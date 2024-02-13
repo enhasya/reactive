@@ -1,5 +1,5 @@
 import React from "react";
-import css from "../../module/ui.module.css";
+import css from "../../modules/ui.module.css";
 
 const { default: ReactiveApp } = require("./reactive-app");
 const {

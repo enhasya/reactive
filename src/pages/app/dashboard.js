@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+
+const { default: LayoutApp } = require("../../layouts/app");
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <LayoutApp>
+      <p>Hi</p>
+    </LayoutApp>
+  );
+};
 
-export default Dashboard
+export default Dashboard;
