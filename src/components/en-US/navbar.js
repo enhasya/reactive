@@ -24,7 +24,7 @@ const {
 
 const Navbar = () => {
   return (
-    <nav className="bg-white flex flex-col lg:flex-row gap-2 items-center justify-between w-full h-auto p-8 lg:p-4">
+    <nav className="bg-transparent flex flex-col lg:flex-row gap-2 items-center justify-between w-full h-auto p-8 lg:p-4">
       <div className="bg-black/5 transition-all flex lg:hidden flex-row gap-4 w-full lg:w-[20%] items-center justify-center p-2 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-0">
         <img src={Search} width="14" height="14" alt="Search" />
         <input
