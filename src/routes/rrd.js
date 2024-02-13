@@ -8,7 +8,7 @@ const {
 const {
   default: AccountActivation,
 } = require("../pages/auth/account-activation");
-const { default: App } = require("../pages/class/app");
+const { default: Dashboard } = require("../pages/app/dashboard");
 
 const RRD = () => {
   return (
@@ -16,15 +16,9 @@ const RRD = () => {
       <Routes>
         <Route path="/" element={<SignIn />} />
         <Route path="/auth/create" element={<AccountCreate />} />
-        <Route
-          path="/auth/confirmation"
-          element={<AccountConfirmation />}
-        />
-        <Route
-          path="/auth/activation"
-          element={<AccountActivation />}
-        />
-        <Route path="/app" element={<App />} />
+        <Route path="/auth/confirmation" element={<AccountConfirmation />} />
+        <Route path="/auth/activation" element={<AccountActivation />} />
+        <Route path="/app" element={<Dashboard />} />
       </Routes>
     </Router>
   );
