@@ -1,7 +1,7 @@
 import React from "react";
 import css from "../../module/ui.module.css";
 
-const { default: ReactiveApp } = require("../auth/reactive-app");
+const { default: ReactiveApp } = require("./reactive-app");
 const {
   default: ArrowLeft,
 } = require("../../shared/icons/arrow-left-sm-white.svg");
@@ -59,7 +59,7 @@ const CreateAccount = () => {
             />
           </div>
           <a
-            href="/auth/account-confirmation"
+            href="/auth/confirmation"
             className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4"
           >
             <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">

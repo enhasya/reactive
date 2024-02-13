@@ -51,7 +51,7 @@ const AccountConfirmation = () => {
             />
           </div>
           <a
-            href="/auth/account-activation"
+            href="/auth/activation"
             className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4"
           >
             <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">

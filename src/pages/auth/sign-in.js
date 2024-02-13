@@ -49,7 +49,7 @@ const SignIn = () => {
           <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-8">
             Join Reactive today!{" "}
             <a
-              href="/auth/create-account"
+              href="/auth/create"
               className="font-bold text-blue-600 hover:underline"
             >
               Create new Account
