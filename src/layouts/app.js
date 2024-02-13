@@ -7,7 +7,7 @@ const {
 
 const LayoutApp = ({ children }) => {
   return (
-    <main className="flex flex-col w-full h-auto lg:h-screen p-0 mt-0">
+    <main className="flex flex-col w-full h-auto lg:h-screen p-0 mt-0 overflow-y-auto">
       <Navbar />
       <div className="flex flex-col lg:flex-row w-full h-full p-0">
         <div className="bg-black/5 fixed top-auto left-0 flex flex-col w-full lg:w-[80%] h-full p-8 lg:p-4">
