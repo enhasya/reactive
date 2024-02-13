@@ -15,7 +15,7 @@ const {
   default: Next,
 } = require("../../shared/icons/arrow-right-sm-white.svg");
 
-const CreateAccount = () => {
+const AccountCreate = () => {
   return (
     <main
       className={`${css.auth} flex flex-col lg:flex-row w-full h-auto lg:h-screen items-center justify-center p-8 lg:p-0`}
@@ -84,4 +84,4 @@ const CreateAccount = () => {
   );
 };
 
-export default CreateAccount;
+export default AccountCreate;

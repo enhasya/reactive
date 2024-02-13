@@ -5,7 +5,7 @@ const {
   default: Creating,
 } = require("../../shared/icons/user-profile-circle-black.svg");
 
-const BirthConfirmation = () => {
+const AccountActivation = () => {
   return (
     <main
       className={`${css.auth} flex flex-col lg:flex-row w-full h-auto lg:h-screen items-center justify-center p-8 lg:p-0`}
@@ -44,4 +44,4 @@ const BirthConfirmation = () => {
   );
 };
 
-export default BirthConfirmation;
+export default AccountActivation;

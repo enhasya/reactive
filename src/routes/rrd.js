@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const { default: SignIn } = require("../pages/auth/sign-in");
-const { default: CreateAccount } = require("../pages/auth/account-create");
+const { default: AccountCreate } = require("../pages/auth/account-create");
 const {
   default: AccountConfirmation,
 } = require("../pages/auth/account-confirmation");
@@ -15,7 +15,7 @@ const RRD = () => {
     <Router>
       <Routes>
         <Route path="/" element={<SignIn />} />
-        <Route path="/auth/create" element={<CreateAccount />} />
+        <Route path="/auth/create" element={<AccountCreate />} />
         <Route
           path="/auth/confirmation"
           element={<AccountConfirmation />}
