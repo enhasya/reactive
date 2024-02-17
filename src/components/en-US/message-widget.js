@@ -17,8 +17,13 @@ const MessageWidget = () => {
   };
 
   return (
-    <div className="flex flex-col w-full lg:w-[20%] h-auto lg:h-full gap-0 p-0 border-r border-r-black/10">
+    <div className="bg-slate-50 flex flex-col w-full lg:w-[30%] h-auto lg:h-full gap-0 p-0 border-r border-r-black/10">
       <div className="bg-transparent flex flex-col w-full h-auto gap-4 px-4 pt-4 rounded-lg">
+        <div className="flex flex-row gap-2 items-center justify-start w-full h-auto">
+          <p className="text-black font-bold text-base text-start tracking-tight leading-relaxed mt-0">
+            Chats
+          </p>
+        </div>
         <div className="flex flex-row gap-2 items-center justify-between w-full h-auto">
           <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
             Online Users

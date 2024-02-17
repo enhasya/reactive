@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const { default: Search } = require("../../shared/icons/search-01-white.svg");
-const { default: Explore } = require("../../shared/icons/globe-02-white.svg");
+const { default: Home } = require("../../shared/icons/home-04-white.svg");
 const {
   default: Notifications,
 } = require("../../shared/icons/notification-box-white.svg");
@@ -11,149 +10,139 @@ const {
 const {
   default: Profile,
 } = require("../../shared/icons/user-profile-circle-white.svg");
-const {
-  default: Account,
-} = require("../../shared/icons/user-profile-03-white.svg");
 const { default: Settings } = require("../../shared/icons/gear-white.svg");
-const {
-  default: ChevronDown,
-} = require("../../shared/icons/chevron-down-white.svg");
 
 const Navbar = () => {
-  const [expandSettings, setExpandSettings] = useState(false);
+  const [hoverHome, setHoverHome] = useState(false);
+  const [hoverMessages, setHoverMessages] = useState(false);
+  const [hoverNotifications, setHoverNotifications] = useState(false);
+  const [hoverProfile, setHoverProfile] = useState(false);
+  const [hoverSettings, setHoverSettings] = useState(false);
 
-  const handleExpandSettings = () => {
-    setExpandSettings(!expandSettings);
+  const handleHoverHome = (boolean) => {
+    setHoverHome(boolean);
+  };
+  const handleHoverMessages = (boolean) => {
+    setHoverMessages(boolean);
+  };
+  const handleHoverNotifications = (boolean) => {
+    setHoverNotifications(boolean);
+  };
+  const handleHoverProfile = (boolean) => {
+    setHoverProfile(boolean);
+  };
+  const handleHoverSettings = (boolean) => {
+    setHoverSettings(boolean);
   };
 
   return (
-    <nav className="bg-slate-600 flex flex-col lg:flex-row gap-2 items-center justify-between w-full h-auto rounded-none lg:rounded-t-lg p-8 lg:p-4">
-      <div className="bg-black/5 transition-all flex lg:hidden flex-row gap-4 w-full lg:w-[20%] items-center justify-center p-4 rounded-lg ring-1 ring-white/10 hover:ring-white/20 mt-0">
-        <img src={Search} width="14" height="14" alt="Search" />
-        <input
-          className="bg-transparent outline-none w-full text-white/80 font-medium text-xs tracking-tight"
-          type="text"
-          placeholder="Search"
-        />
-      </div>
-      <div className="flex flex-col lg:flex-row gap-2 items-start lg:items-center justify-center lg:justify-start w-full lg:w-[40%]">
-        <button className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-full lg:w-auto rounded-lg p-2">
+    <nav className="bg-slate-600 flex flex-col gap-2 items-center justify-between w-full lg:w-auto h-auto rounded-none lg:rounded-l-lg p-8 lg:p-4">
+      <div className="flex flex-col gap-2 items-start justify-center lg:justify-start w-full">
+        <button className="bg-transparent transition-all hover:bg-black/10 flex lg:hidden flex-row gap-2 items-center w-full lg:w-auto rounded-lg p-2">
           <p className="text-white font-bold text-xs text-center tracking-tight leading-relaxed mt-0">
             REACTIVE
           </p>
         </button>
-        <button className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-full lg:w-auto rounded-lg p-2">
-          <img src={Explore} width="14" height="14" alt="Explore" />
-          <p className="text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
-            Explore
-          </p>
-        </button>
-        <button className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-full lg:w-auto rounded-lg p-2">
-          <img src={Notifications} width="14" height="14" alt="Notifications" />
-          <p className="text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
-            Notifications
-          </p>
-        </button>
-        <button className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-full lg:w-auto rounded-lg p-2">
-          <img src={Messages} width="14" height="14" alt="Messages" />
-          <p className="text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
-            Messages
-          </p>
-        </button>
-        <button className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-full lg:w-auto rounded-lg p-2">
-          <img src={Profile} width="14" height="14" alt="Profile" />
-          <p className="text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
-            Profile
-          </p>
-        </button>
-      </div>
-      <div className="bg-black/5 transition-all hidden lg:flex flex-row gap-4 w-full lg:w-[20%] items-center justify-center p-2 rounded-lg ring-1 ring-white/10 hover:ring-white/20 mt-0">
-        <img src={Search} width="14" height="14" alt="Search" />
-        <input
-          className="bg-transparent outline-none w-full text-white/80 font-medium text-xs tracking-tight"
-          type="text"
-          placeholder="Search"
-        />
-      </div>
-      <div className="flex flex-col lg:flex-row gap-2 items-start lg:items-center justify-center lg:justify-end w-full lg:w-[40%]">
-        <div className="flex flex-row gap-2 items-center justify-between lg:justify-end w-full lg:w-auto">
-          <button className="bg-transparent lg:bg-black/5 transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2">
-            <img src={Account} width="14" height="14" alt="Account" />
-            <p className="text-white font-bold text-xs text-center tracking-tight leading-relaxed mt-0">
-              Ras M.
+        <div className="relative">
+          <button
+            onMouseEnter={() => handleHoverHome(true)}
+            onMouseLeave={() => handleHoverHome(false)}
+            className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
+          >
+            <img src={Home} width="14" height="14" alt="Home" />
+            <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
+              Home
             </p>
+          </button>
+          {hoverHome && (
+            <div className="bg-slate-600 fixed top-[48px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+              <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                Home
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="relative">
+          <button
+            onMouseEnter={() => handleHoverMessages(true)}
+            onMouseLeave={() => handleHoverMessages(false)}
+            className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
+          >
+            <img src={Messages} width="14" height="14" alt="Messages" />
+            <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
+              Messages
+            </p>
+          </button>
+          {hoverMessages && (
+            <div className="bg-slate-600 fixed top-[100px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+              <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                Messages
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="relative">
+          <button
+            onMouseEnter={() => handleHoverNotifications(true)}
+            onMouseLeave={() => handleHoverNotifications(false)}
+            className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
+          >
             <img
-              className="hidden lg:flex"
-              src={ChevronDown}
+              src={Notifications}
               width="14"
               height="14"
-              alt="ChevronDown"
+              alt="Notifications"
             />
+            <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
+              Notifications
+            </p>
           </button>
+          {hoverNotifications && (
+            <div className="bg-slate-600 fixed top-[152px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+              <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                Notifications
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="flex flex-col gap-2 items-start justify-center lg:justify-end w-full">
+        <div className="flex flex-col gap-2 items-center justify-between lg:justify-end w-full lg:w-auto">
           <div className="relative">
             <button
-              onClick={handleExpandSettings}
-              className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2"
+              onMouseEnter={() => handleHoverProfile(true)}
+              onMouseLeave={() => handleHoverProfile(false)}
+              className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
+            >
+              <img src={Profile} width="14" height="14" alt="Profile" />
+              <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
+                Ras M.
+              </p>
+            </button>
+            {hoverProfile && (
+              <div className="bg-slate-600 fixed bottom-[100px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+                <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Profile
+                </p>
+              </div>
+            )}
+          </div>
+          <div className="relative">
+            <button
+              onMouseEnter={() => handleHoverSettings(true)}
+              onMouseLeave={() => handleHoverSettings(false)}
+              className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
             >
               <img src={Settings} width="14" height="14" alt="Settings" />
-              <p className="text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
+              <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
                 Settings
               </p>
-              <img
-                className={`hidden lg:flex transition-all ${
-                  expandSettings ? "rotate-180" : "rotate-0"
-                }`}
-                src={ChevronDown}
-                width="14"
-                height="14"
-                alt="ChevronDown"
-              />
             </button>
-            {expandSettings && (
-              <div className="bg-white fixed top-24 right-12 flex flex-col gap-0 items-start w-[320px] ring-1 ring-black/10 rounded-lg p-0">
-                <div className="bg-transparent flex flex-col w-full h-auto gap-4 px-4 pt-4 rounded-lg">
-                  <div className="flex flex-row gap-2 items-center justify-between w-full h-auto">
-                    <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                      Account
-                    </p>
-                  </div>
-                  <div className="flex flex-col w-full h-auto gap-2">
-                    <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
-                      <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                        Edit Profile
-                      </p>
-                    </div>
-                    <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
-                      <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                        Security Settings
-                      </p>
-                    </div>
-                    <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
-                      <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                        Sign Out
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-transparent flex flex-col w-full h-auto gap-4 px-4 py-4 rounded-lg">
-                  <div className="flex flex-row gap-2 items-center justify-between w-full h-auto">
-                    <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                      Help Center
-                    </p>
-                  </div>
-                  <div className="flex flex-col w-full h-auto gap-2">
-                    <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
-                      <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                        FAQ
-                      </p>
-                    </div>
-                    <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
-                      <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                        Contact Us
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            {hoverSettings && (
+              <div className="bg-slate-600 fixed bottom-[48px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+                <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Account
+                </p>
               </div>
             )}
           </div>
