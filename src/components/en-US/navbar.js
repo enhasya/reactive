@@ -49,15 +49,18 @@ const Navbar = () => {
             onMouseLeave={() => handleHoverHome(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
-            <img src={Home} width="14" height="14" alt="Home" />
+            <img src={Home} width="20" height="20" alt="Home" />
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Home
             </p>
           </button>
           {hoverHome && (
-            <div className="bg-slate-600 fixed top-[48px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+            <div className="bg-slate-600 fixed z-10 top-[48px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Home
+              </p>
+              <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                Access the dashboard of the app
               </p>
             </div>
           )}
@@ -68,15 +71,18 @@ const Navbar = () => {
             onMouseLeave={() => handleHoverMessages(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
-            <img src={Messages} width="14" height="14" alt="Messages" />
+            <img src={Messages} width="20" height="20" alt="Messages" />
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Messages
             </p>
           </button>
           {hoverMessages && (
-            <div className="bg-slate-600 fixed top-[100px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+            <div className="bg-slate-600 fixed z-10 top-[105.25px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Messages
+              </p>
+              <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                Start interact with other users
               </p>
             </div>
           )}
@@ -89,8 +95,8 @@ const Navbar = () => {
           >
             <img
               src={Notifications}
-              width="14"
-              height="14"
+              width="20"
+              height="20"
               alt="Notifications"
             />
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
@@ -98,9 +104,12 @@ const Navbar = () => {
             </p>
           </button>
           {hoverNotifications && (
-            <div className="bg-slate-600 fixed top-[152px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+            <div className="bg-slate-600 fixed z-10 top-[162.5px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Notifications
+              </p>
+              <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                Friend requests, likes, and more can be found here
               </p>
             </div>
           )}
@@ -114,15 +123,18 @@ const Navbar = () => {
               onMouseLeave={() => handleHoverProfile(false)}
               className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
             >
-              <img src={Profile} width="14" height="14" alt="Profile" />
+              <img src={Profile} width="20" height="20" alt="Profile" />
               <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
                 Ras M.
               </p>
             </button>
             {hoverProfile && (
-              <div className="bg-slate-600 fixed bottom-[100px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+              <div className="bg-slate-600 fixed z-10 bottom-[105.25px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
                 <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                   Profile
+                </p>
+                <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Your space to manage your profile
                 </p>
               </div>
             )}
@@ -133,15 +145,19 @@ const Navbar = () => {
               onMouseLeave={() => handleHoverSettings(false)}
               className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
             >
-              <img src={Settings} width="14" height="14" alt="Settings" />
+              <img src={Settings} width="20" height="20" alt="Settings" />
               <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
                 Settings
               </p>
             </button>
             {hoverSettings && (
-              <div className="bg-slate-600 fixed bottom-[48px] left-[120px] flex flex-col gap-0 items-start w-auto shadow-2xl shadow-black/10 rounded-lg p-4">
+              <div className="bg-slate-600 fixed z-10 bottom-[48px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
                 <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                  Account
+                  Settings
+                </p>
+                <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Access the settings of your account, including edit your
+                  profile, security settings, and sign out
                 </p>
               </div>
             )}
