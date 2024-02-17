@@ -1,325 +1,122 @@
-import React from "react";
+import React, { useState } from "react";
 
 const {
   default: ChevronDown,
 } = require("../../shared/icons/chevron-down-black.svg");
 
 const MessageWidget = () => {
-  const [expandChats, setExpandChats] = React.useState(false);
-  const [expandContacts, setExpandContacts] = React.useState(false);
+  const [expandOnlineUsers, setExpandOnlineUsers] = useState(true);
+  const [expandRecentChats, setExpandRecentChats] = useState(true);
 
-  const handleExpandChats = () => {
-    setExpandChats(!expandChats);
+  const handleExpandOnlineUsers = () => {
+    setExpandOnlineUsers(!expandOnlineUsers);
   };
-  const handleExpandContacts = () => {
-    setExpandContacts(!expandContacts);
+
+  const handleExpandRecentChats = () => {
+    setExpandRecentChats(!expandRecentChats);
   };
 
   return (
-    <main className="flex flex-col gap-4 items-start justify-start w-full h-auto p-0 overflow-y-auto">
-      <div className="flex flex-col items-start justify-between gap-0 w-full h-auto overflow-y-auto">
-        <div className="flex flex-row items-center justify-between gap-4 w-full h-auto overflow-y-auto">
-          <div className="flex flex-col items-start justify-start gap-0 w-full h-auto overflow-y-auto">
-            <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-              Active Chats
-            </p>
-            <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-              See the latest messages from your friends
-            </p>
-          </div>
+    <div className="flex flex-col w-full lg:w-[20%] h-auto lg:h-full gap-0 p-0 border-r border-r-black/10">
+      <div className="bg-transparent flex flex-col w-full h-auto gap-4 px-4 pt-4 rounded-lg">
+        <div className="flex flex-row gap-2 items-center justify-between w-full h-auto">
+          <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+            Online Users
+          </p>
           <button
-            onClick={handleExpandChats}
-            className="bg-black/5 transition-all hover:bg-black/10 flex p-2 rounded-lg"
+            onClick={handleExpandOnlineUsers}
+            className="bg-white flex w-auto h-auto p-2 rounded-lg ring-1 ring-black/10"
           >
             <img
               className={`transition-all ${
-                expandChats ? "rotate-180" : "rotate-0"
+                expandOnlineUsers ? "rotate-180" : "rotate-0"
               }`}
               src={ChevronDown}
-              width="20"
-              height="20"
+              width="14"
+              height="14"
               alt="ChevronDown"
             />
           </button>
         </div>
-        {expandChats && (
-          <div className="bg-black/5 flex flex-col items-start justify-start w-full h-auto lg:h-[240px] gap-4 rounded-lg p-4 mt-4 overflow-y-auto">
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
+        {expandOnlineUsers && (
+          <div className="flex flex-col w-full h-auto gap-2">
+            <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
               <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
+                Testing
               </p>
               <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
+                Testing
               </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
+            </div>
+            <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
               <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
+                Testing
               </p>
               <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
+                Testing
               </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
+            </div>
+            <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
               <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
+                Testing
               </p>
               <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
+                Testing
               </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
+            </div>
           </div>
         )}
       </div>
-      <div className="flex flex-col items-start justify-start w-full h-auto overflow-y-auto">
-        <div className="flex flex-row items-center justify-between gap-4 w-full h-auto overflow-y-auto">
-          <div className="flex flex-col items-start justify-start gap-0 w-full h-auto overflow-y-auto">
-            <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-              Contacts
-            </p>
-            <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-              You've 6 contacts active right now
-            </p>
-          </div>
+      <div className="bg-transparent flex flex-col w-full h-auto gap-4 px-4 pt-4 rounded-lg">
+        <div className="flex flex-row gap-2 items-center justify-between w-full h-auto">
+          <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+            Recent Chats
+          </p>
           <button
-            onClick={handleExpandContacts}
-            className="bg-black/5 transition-all hover:bg-black/10 flex p-2 rounded-lg"
+            onClick={handleExpandRecentChats}
+            className="bg-white flex w-auto h-auto p-2 rounded-lg ring-1 ring-black/10"
           >
             <img
               className={`transition-all ${
-                expandContacts ? "rotate-180" : "rotate-0"
+                expandRecentChats ? "rotate-180" : "rotate-0"
               }`}
               src={ChevronDown}
-              width="20"
-              height="20"
+              width="14"
+              height="14"
               alt="ChevronDown"
             />
           </button>
         </div>
-        {expandContacts && (
-          <div className="bg-black/5 flex flex-col items-start justify-start w-full h-auto lg:h-[240px] gap-4 rounded-lg p-4 mt-4 overflow-y-auto">
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
+        {expandRecentChats && (
+          <div className="flex flex-col w-full h-auto gap-2">
+            <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
               <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
+                Testing
               </p>
               <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
+                Testing
               </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
+            </div>
+            <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
               <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
+                Testing
               </p>
               <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
+                Testing
               </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
+            </div>
+            <div className="bg-black/5 flex flex-col w-full h-auto gap-0 rounded-lg p-4">
               <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
+                Testing
               </p>
               <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
+                Testing
               </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
-            <button className="bg-black/5 ring-1 ring-black/10 hover:ring-black/20 flex flex-col items-start justify-center w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person Name
-              </p>
-              <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Containing message from or to the person
-              </p>
-            </button>
+            </div>
           </div>
         )}
       </div>
-    </main>
+    </div>
   );
 };
 
