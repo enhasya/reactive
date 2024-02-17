@@ -12,9 +12,6 @@ const {
   default: Profile,
 } = require("../../shared/icons/user-profile-circle-white.svg");
 const {
-  default: Analytics,
-} = require("../../shared/icons/line-chart-up-02-white.svg");
-const {
   default: Account,
 } = require("../../shared/icons/user-profile-03-white.svg");
 const { default: Settings } = require("../../shared/icons/gear-white.svg");
@@ -31,10 +28,10 @@ const Navbar = () => {
 
   return (
     <nav className="bg-slate-600 flex flex-col lg:flex-row gap-2 items-center justify-between w-full h-auto rounded-none lg:rounded-t-lg p-8 lg:p-4">
-      <div className="bg-black/5 transition-all flex lg:hidden flex-row gap-4 w-full lg:w-[20%] items-center justify-center p-2 rounded-lg ring-1 ring-white/10 hover:ring-white/20 mt-0">
+      <div className="bg-black/5 transition-all flex lg:hidden flex-row gap-4 w-full lg:w-[20%] items-center justify-center p-4 rounded-lg ring-1 ring-white/10 hover:ring-white/20 mt-0">
         <img src={Search} width="14" height="14" alt="Search" />
         <input
-          className="bg-transparent outline-none w-full text-black/80 font-medium text-xs tracking-tight"
+          className="bg-transparent outline-none w-full text-white/80 font-medium text-xs tracking-tight"
           type="text"
           placeholder="Search"
         />
@@ -79,19 +76,6 @@ const Navbar = () => {
         />
       </div>
       <div className="flex flex-col lg:flex-row gap-2 items-start lg:items-center justify-center lg:justify-end w-full lg:w-[40%]">
-        <button className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-full lg:w-auto rounded-lg p-2">
-          <img src={Analytics} width="14" height="14" alt="Analytics" />
-          <p className="text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
-            Analytics
-          </p>
-          <img
-            className="hidden lg:flex"
-            src={ChevronDown}
-            width="14"
-            height="14"
-            alt="ChevronDown"
-          />
-        </button>
         <div className="flex flex-row gap-2 items-center justify-between lg:justify-end w-full lg:w-auto">
           <button className="bg-transparent lg:bg-black/5 transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2">
             <img src={Account} width="14" height="14" alt="Account" />
