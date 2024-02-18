@@ -21,7 +21,7 @@ const SignIn = () => {
         <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
           <img src={Username} width="14" height="14" alt="Username" />
           <input
-            className="bg-transparent outline-none w-full text-black/80 font-medium text-xs tracking-tight"
+            className="bg-transparent outline-none w-full text-black font-medium text-xs tracking-tight"
             type="text"
             placeholder="Username"
           />
@@ -29,12 +29,12 @@ const SignIn = () => {
         <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
           <img src={Password} width="14" height="14" alt="Password" />
           <input
-            className="bg-transparent outline-none w-full text-black/80 font-medium text-xs tracking-tight"
+            className="bg-transparent outline-none w-full text-black font-medium text-xs tracking-tight"
             type="password"
             placeholder="Password"
           />
         </div>
-        <button className="bg-black/95 hover:bg-black/75 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
+        <button className="bg-black hover:bg-black/80 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
           <img src={Authenticate} width="14" height="14" alt="Authenticate" />
           <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">
             Authenticate

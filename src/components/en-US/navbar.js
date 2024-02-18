@@ -59,7 +59,7 @@ const Navbar = () => {
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Home
               </p>
-              <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+              <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
                 Access the dashboard of the app
               </p>
             </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Messages
               </p>
-              <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+              <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
                 Start interact with other users
               </p>
             </div>
@@ -108,60 +108,58 @@ const Navbar = () => {
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Notifications
               </p>
-              <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+              <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
                 Friend requests, likes, and more can be found here
               </p>
             </div>
           )}
         </div>
       </div>
-      <div className="flex flex-col gap-2 items-start justify-center lg:justify-end w-full">
-        <div className="flex flex-col gap-2 items-center justify-between lg:justify-end w-full lg:w-auto">
-          <div className="relative">
-            <button
-              onMouseEnter={() => handleHoverProfile(true)}
-              onMouseLeave={() => handleHoverProfile(false)}
-              className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
-            >
-              <img src={Profile} width="20" height="20" alt="Profile" />
-              <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
-                Ras M.
+      <div className="flex flex-col gap-2 items-start justify-center lg:justify-start w-full">
+        <div className="relative">
+          <button
+            onMouseEnter={() => handleHoverProfile(true)}
+            onMouseLeave={() => handleHoverProfile(false)}
+            className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
+          >
+            <img src={Profile} width="20" height="20" alt="Profile" />
+            <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
+              Ras M.
+            </p>
+          </button>
+          {hoverProfile && (
+            <div className="bg-slate-600 fixed z-10 bottom-[105.25px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
+              <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                Profile
               </p>
-            </button>
-            {hoverProfile && (
-              <div className="bg-slate-600 fixed z-10 bottom-[105.25px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
-                <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                  Profile
-                </p>
-                <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                  Your space to manage your profile
-                </p>
-              </div>
-            )}
-          </div>
-          <div className="relative">
-            <button
-              onMouseEnter={() => handleHoverSettings(true)}
-              onMouseLeave={() => handleHoverSettings(false)}
-              className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
-            >
-              <img src={Settings} width="20" height="20" alt="Settings" />
-              <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
+              <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                Your space to manage your profile
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="relative">
+          <button
+            onMouseEnter={() => handleHoverSettings(true)}
+            onMouseLeave={() => handleHoverSettings(false)}
+            className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
+          >
+            <img src={Settings} width="20" height="20" alt="Settings" />
+            <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
+              Settings
+            </p>
+          </button>
+          {hoverSettings && (
+            <div className="bg-slate-600 fixed z-10 bottom-[48px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
+              <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Settings
               </p>
-            </button>
-            {hoverSettings && (
-              <div className="bg-slate-600 fixed z-10 bottom-[48px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
-                <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                  Settings
-                </p>
-                <p className="text-white font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                  Access the settings of your account, including edit your
-                  profile, security settings, and sign out
-                </p>
-              </div>
-            )}
-          </div>
+              <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                Access the settings of your account, including edit your
+                profile, security settings, and sign out
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </nav>
