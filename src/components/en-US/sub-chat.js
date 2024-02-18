@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import ProfilePicture from "../../shared/assets/424553395_1449727305637474_636083031125237822_n.jpg";
+
 const SubChat = () => {
   const [expandRecentChats, setExpandRecentChats] = useState(true);
   const [expandGroups, setExpandGroups] = useState(true);
@@ -26,13 +28,22 @@ const SubChat = () => {
         <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
           Your Profile
         </p>
-        <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-col w-full h-auto p-4 rounded-lg">
-          <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-            Ras M.
-          </p>
-          <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-            Available
-          </p>
+        <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+          <img
+            className="aspect-square rounded-full"
+            src={ProfilePicture}
+            width="48"
+            height="48"
+            alt="ProfilePicture"
+          />
+          <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+            <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+              Ras M.
+            </p>
+            <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+              Available
+            </p>
+          </div>
         </div>
         <div className="flex flex-row items-center justify-between w-full h-auto">
           <button className="flex flex-row gap-2 items-center justify-center hover:underline">
@@ -49,11 +60,9 @@ const SubChat = () => {
       </div>
       <div className="flex flex-col w-full h-auto gap-2 mt-4">
         <div className="flex flex-row items-center justify-between w-full h-auto">
-          <button className="flex flex-row gap-2 items-center justify-center hover:underline">
-            <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-              Recent Chats
-            </p>
-          </button>
+          <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+            Recent Chats
+          </p>
           <button
             onClick={handleExpandRecentChats}
             className="flex flex-row gap-2 items-center justify-center hover:underline"
@@ -65,32 +74,48 @@ const SubChat = () => {
         </div>
         {expandRecentChats && (
           <React.Fragment>
-            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-col w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person 1
-              </p>
-              <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Available
-              </p>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Cressida
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Available
+                </p>
+              </div>
             </div>
-            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-col w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person 2
-              </p>
-              <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Busy
-              </p>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Miranda
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Available
+                </p>
+              </div>
             </div>
           </React.Fragment>
         )}
       </div>
       <div className="flex flex-col w-full h-auto gap-2 mt-4">
         <div className="flex flex-row items-center justify-between w-full h-auto">
-          <button className="flex flex-row gap-2 items-center justify-center hover:underline">
-            <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-              Groups
-            </p>
-          </button>
+          <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+            Groups
+          </p>
           <button
             onClick={handleExpandGroups}
             className="flex flex-row gap-2 items-center justify-center hover:underline"
@@ -102,32 +127,48 @@ const SubChat = () => {
         </div>
         {expandGroups && (
           <React.Fragment>
-            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-col w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Reactive Testing
-              </p>
-              <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                CBT of Reactive
-              </p>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Reactive Testing
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  CBT of Reactive Group
+                </p>
+              </div>
             </div>
-            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-col w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Deployment Testing
-              </p>
-              <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Our Private Group for Deployment Testing
-              </p>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Deployment Testing
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Our Private Group for Deployment Testing
+                </p>
+              </div>
             </div>
           </React.Fragment>
         )}
       </div>
       <div className="flex flex-col w-full h-auto gap-2 mt-4">
         <div className="flex flex-row items-center justify-between w-full h-auto">
-          <button className="flex flex-row gap-2 items-center justify-center hover:underline">
-            <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-              Contacts
-            </p>
-          </button>
+          <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+            Contacts
+          </p>
           <button
             onClick={handleExpandContacts}
             className="flex flex-row gap-2 items-center justify-center hover:underline"
@@ -139,21 +180,90 @@ const SubChat = () => {
         </div>
         {expandContacts && (
           <React.Fragment>
-            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-col w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person 1
-              </p>
-              <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Available
-              </p>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Bianca
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Available
+                </p>
+              </div>
             </div>
-            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-col w-full h-auto p-4 rounded-lg">
-              <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Person 2
-              </p>
-              <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-                Busy
-              </p>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Cressida
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Available
+                </p>
+              </div>
+            </div>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Desdemona
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Busy
+                </p>
+              </div>
+            </div>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Margaret
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Not Available
+                </p>
+              </div>
+            </div>
+            <div className="bg-black/5 transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+              <img
+                className="aspect-square rounded-full"
+                src={ProfilePicture}
+                width="48"
+                height="48"
+                alt="ProfilePicture"
+              />
+              <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Miranda
+                </p>
+                <p className="text-black/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                  Busy
+                </p>
+              </div>
             </div>
           </React.Fragment>
         )}

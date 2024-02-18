@@ -77,7 +77,7 @@ const Navbar = () => {
             </p>
           </button>
           {hoverMessages && (
-            <div className="bg-slate-600 fixed z-10 top-[105.25px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
+            <div className="bg-slate-600 fixed z-10 top-[106px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Messages
               </p>
@@ -104,7 +104,7 @@ const Navbar = () => {
             </p>
           </button>
           {hoverNotifications && (
-            <div className="bg-slate-600 fixed z-10 top-[162.5px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
+            <div className="bg-slate-600 fixed z-10 top-[164px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Notifications
               </p>
@@ -128,7 +128,7 @@ const Navbar = () => {
             </p>
           </button>
           {hoverProfile && (
-            <div className="bg-slate-600 fixed z-10 bottom-[105.25px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
+            <div className="bg-slate-600 fixed z-10 bottom-[106px] left-[120px] flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Profile
               </p>
