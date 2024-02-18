@@ -40,7 +40,7 @@ const MessageWidget = () => {
         </p>
         <div className="bg-black/5 flex flex-col w-full h-auto p-4 rounded-lg">
           <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-            Ras M.
+            Person 1
           </p>
           <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
             Available
@@ -48,10 +48,10 @@ const MessageWidget = () => {
         </div>
         <div className="bg-black/5 flex flex-col w-full h-auto p-4 rounded-lg">
           <p className="text-black font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-            Ras M.
+            Person 2
           </p>
           <p className="text-black font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
-            Available
+            Busy
           </p>
         </div>
       </div>
