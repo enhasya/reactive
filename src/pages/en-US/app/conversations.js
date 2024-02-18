@@ -13,7 +13,7 @@ const Conversations = () => {
     <LayoutApp>
       <div className="bg-transparent flex flex-col w-full h-auto lg:h-full items-center justify-between gap-0 p-4 overflow-y-auto">
         <p className="text-black font-bold text-base text-start tracking-tight leading-relaxed w-full mt-0 mb-4">
-          [parameter:roomName]
+          [parameter:userName]
         </p>
         <div className="flex flex-col w-full h-full p-0 mt-0 overflow-y-auto">
           <div className="flex w-full items-center justify-start">
