@@ -3,8 +3,8 @@ import css from "../modules/ui.module.css";
 
 const { default: Navbar } = require("../components/en-US/navbar");
 const {
-  default: MessageWidget,
-} = require("../components/en-US/message-widget");
+  default: SubChat,
+} = require("../components/en-US/sub-chat");
 
 const LayoutApp = ({ children }) => {
   return (
@@ -13,7 +13,7 @@ const LayoutApp = ({ children }) => {
     >
       <Navbar />
       <div className="bg-transparent backdrop-blur-lg flex flex-col lg:flex-row w-full h-full p-0 mt-0">
-        <MessageWidget />
+        <SubChat />
         {React.Children.map(children, (child) => child)}
       </div>
     </main>

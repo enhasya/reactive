@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const MessageWidget = () => {
+const SubChat = () => {
   const [expandRecentChats, setExpandRecentChats] = useState(true);
   const [expandGroups, setExpandGroups] = useState(true);
   const [expandContacts, setExpandContacts] = useState(true);
@@ -162,4 +162,4 @@ const MessageWidget = () => {
   );
 };
 
-export default MessageWidget;
+export default SubChat;
