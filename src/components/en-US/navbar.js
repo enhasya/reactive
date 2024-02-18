@@ -49,7 +49,21 @@ const Navbar = () => {
             onMouseLeave={() => handleHoverHome(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
-            <img src={Home} width="20" height="20" alt="Home" />
+            {" "}
+            <img
+              className="flex lg:hidden"
+              src={Home}
+              width="14"
+              height="14"
+              alt="Home"
+            />
+            <img
+              className="hidden lg:flex"
+              src={Home}
+              width="20"
+              height="20"
+              alt="Home"
+            />
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Home
             </p>
@@ -71,7 +85,20 @@ const Navbar = () => {
             onMouseLeave={() => handleHoverConversations(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
-            <img src={Conversations} width="20" height="20" alt="Conversations" />
+            <img
+              className="flex lg:hidden"
+              src={Conversations}
+              width="14"
+              height="14"
+              alt="Conversations"
+            />
+            <img
+              className="hidden lg:flex"
+              src={Conversations}
+              width="20"
+              height="20"
+              alt="Conversations"
+            />
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Conversations
             </p>
@@ -94,6 +121,14 @@ const Navbar = () => {
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
             <img
+              className="flex lg:hidden"
+              src={Notifications}
+              width="14"
+              height="14"
+              alt="Notifications"
+            />
+            <img
+              className="hidden lg:flex"
               src={Notifications}
               width="20"
               height="20"
@@ -122,7 +157,20 @@ const Navbar = () => {
             onMouseLeave={() => handleHoverProfile(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
-            <img src={Profile} width="20" height="20" alt="Profile" />
+            <img
+              className="flex lg:hidden"
+              src={Profile}
+              width="14"
+              height="14"
+              alt="Profile"
+            />
+            <img
+              className="hidden lg:flex"
+              src={Profile}
+              width="20"
+              height="20"
+              alt="Profile"
+            />
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Ras M.
             </p>
@@ -144,7 +192,20 @@ const Navbar = () => {
             onMouseLeave={() => handleHoverSettings(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
-            <img src={Settings} width="20" height="20" alt="Settings" />
+            <img
+              className="flex lg:hidden"
+              src={Settings}
+              width="14"
+              height="14"
+              alt="Settings"
+            />
+            <img
+              className="hidden lg:flex"
+              src={Settings}
+              width="20"
+              height="20"
+              alt="Settings"
+            />
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Settings
             </p>
