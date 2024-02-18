@@ -20,7 +20,7 @@ const SubChat = () => {
   };
 
   return (
-    <div className="flex flex-col w-full lg:w-[30%] h-auto lg:h-full gap-0 p-4 border-r border-r-black/10 overflow-y-auto">
+    <div className="bg-transparent flex flex-col w-full lg:w-[30%] h-auto lg:h-full gap-0 p-4 border-l border-l-black/10 overflow-y-auto">
       <p className="text-black font-bold text-base text-start tracking-tight leading-relaxed mt-0">
         Chats
       </p>
