@@ -5,7 +5,7 @@ const {
   default: Notifications,
 } = require("../../shared/icons/notification-box-white.svg");
 const {
-  default: Messages,
+  default: Conversations,
 } = require("../../shared/icons/message-chat-01-white.svg");
 const {
   default: Profile,
@@ -14,7 +14,7 @@ const { default: Settings } = require("../../shared/icons/gear-white.svg");
 
 const Navbar = () => {
   const [hoverHome, setHoverHome] = useState(false);
-  const [hoverMessages, setHoverMessages] = useState(false);
+  const [hoverConversations, setHoverConversations] = useState(false);
   const [hoverNotifications, setHoverNotifications] = useState(false);
   const [hoverProfile, setHoverProfile] = useState(false);
   const [hoverSettings, setHoverSettings] = useState(false);
@@ -22,8 +22,8 @@ const Navbar = () => {
   const handleHoverHome = (boolean) => {
     setHoverHome(boolean);
   };
-  const handleHoverMessages = (boolean) => {
-    setHoverMessages(boolean);
+  const handleHoverConversations = (boolean) => {
+    setHoverConversations(boolean);
   };
   const handleHoverNotifications = (boolean) => {
     setHoverNotifications(boolean);
@@ -67,19 +67,19 @@ const Navbar = () => {
         </div>
         <div className="relative">
           <button
-            onMouseEnter={() => handleHoverMessages(true)}
-            onMouseLeave={() => handleHoverMessages(false)}
+            onMouseEnter={() => handleHoverConversations(true)}
+            onMouseLeave={() => handleHoverConversations(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
-            <img src={Messages} width="20" height="20" alt="Messages" />
+            <img src={Conversations} width="20" height="20" alt="Conversations" />
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
-              Messages
+              Conversations
             </p>
           </button>
-          {hoverMessages && (
+          {hoverConversations && (
             <div className="bg-slate-600 fixed z-10 top-[106px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-                Messages
+                Conversations
               </p>
               <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
                 Start interact with other users

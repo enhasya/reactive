@@ -5,7 +5,7 @@ const { default: LayoutApp } = require("../../../layouts/app");
 const Dashboard = () => {
   return (
     <LayoutApp>
-      <div className="bg-transparent flex flex-col w-full h-auto lg:h-full gap-0 p-4 border-y border-r border-y-black/10 border-r-black/10 rounded-none lg:rounded-r-lg overflow-y-auto">
+      <div className="bg-transparent flex flex-col w-full h-auto lg:h-full gap-0 p-4 overflow-y-auto">
         <p className="text-black font-bold text-base text-start tracking-tight leading-relaxed mt-0">
           Chats
         </p>

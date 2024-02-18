@@ -20,7 +20,7 @@ const SubChat = () => {
   };
 
   return (
-    <div className="flex flex-col w-full lg:w-[30%] h-auto lg:h-full gap-0 p-4 border-y border-r border-y-black/10 border-r-black/10 overflow-y-auto">
+    <div className="flex flex-col w-full lg:w-[30%] h-auto lg:h-full gap-0 p-4 border-r border-r-black/10 overflow-y-auto">
       <p className="text-black font-bold text-base text-start tracking-tight leading-relaxed mt-0">
         Chats
       </p>
@@ -47,7 +47,7 @@ const SubChat = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-between w-full h-auto mt-2">
+        <div className="flex flex-row items-center justify-between w-full h-auto mt-2 mb-2">
           <button className="flex flex-row gap-2 items-center justify-center hover:underline">
             <p className="text-slate-600 font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
               Edit Profile

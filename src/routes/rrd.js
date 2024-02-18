@@ -11,6 +11,7 @@ const {
   default: AccountActivation,
 } = require("../pages/en-US/auth/account-activation");
 const { default: Dashboard } = require("../pages/en-US/app/dashboard");
+const { default: Conversations } = require("../pages/en-US/app/conversations");
 
 const RRD = () => {
   return (
@@ -24,6 +25,7 @@ const RRD = () => {
         />
         <Route path="/en-US/auth/activation" element={<AccountActivation />} />
         <Route path="/en-US/app" element={<Dashboard />} />
+        <Route path="/en-US/conversations" element={<Conversations />} />
       </Routes>
     </Router>
   );
