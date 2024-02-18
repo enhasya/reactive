@@ -30,7 +30,7 @@ const SubChat = () => {
             Your Profile
           </p>
         </div>
-        <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+        <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
           <img
             className="aspect-square rounded-full"
             src={ProfilePicture}
@@ -76,7 +76,7 @@ const SubChat = () => {
         </div>
         {expandRecentChats && (
           <React.Fragment>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
@@ -93,7 +93,7 @@ const SubChat = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
@@ -129,7 +129,7 @@ const SubChat = () => {
         </div>
         {expandGroups && (
           <React.Fragment>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
@@ -146,7 +146,7 @@ const SubChat = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
@@ -182,7 +182,7 @@ const SubChat = () => {
         </div>
         {expandContacts && (
           <React.Fragment>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
@@ -199,7 +199,7 @@ const SubChat = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
@@ -216,7 +216,7 @@ const SubChat = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
@@ -233,7 +233,7 @@ const SubChat = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
@@ -250,7 +250,7 @@ const SubChat = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-4 rounded-lg">
+            <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
                 className="aspect-square rounded-full"
                 src={ProfilePicture}
