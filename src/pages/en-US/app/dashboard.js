@@ -16,12 +16,14 @@ const Dashboard = () => {
         <div className="flex flex-col w-full items-center justify-center mt-8 lg:mt-0">
           <div className="flex flex-row gap-4 items-center justify-center mt-0">
             <img
+            className="animate-none lg:animate-pulse"
               src={StartConversation}
               width="64"
               height="64"
               alt="StartConversation"
             />
             <img
+            className="animate-none lg:animate-pulse"
               src={Conversations}
               width="64"
               height="64"
