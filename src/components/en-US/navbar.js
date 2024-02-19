@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 const { default: Home } = require("../../shared/icons/home-04-white.svg");
 const {
-  default: Notifications,
-} = require("../../shared/icons/notification-box-white.svg");
-const {
   default: Conversations,
 } = require("../../shared/icons/message-chat-01-white.svg");
+const {
+  default: Notifications,
+} = require("../../shared/icons/notification-box-white.svg");
 const {
   default: Profile,
 } = require("../../shared/icons/user-profile-circle-white.svg");
