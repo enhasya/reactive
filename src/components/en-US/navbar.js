@@ -44,7 +44,8 @@ const Navbar = () => {
           </p>
         </button>
         <div className="relative">
-          <button
+          <a
+            href="/en-US/app"
             onMouseEnter={() => handleHoverHome(true)}
             onMouseLeave={() => handleHoverHome(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
@@ -67,7 +68,7 @@ const Navbar = () => {
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Home
             </p>
-          </button>
+          </a>
           {hoverHome && (
             <div className="bg-slate-600 fixed z-10 top-[48px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
@@ -80,7 +81,8 @@ const Navbar = () => {
           )}
         </div>
         <div className="relative">
-          <button
+          <a
+            href="/en-US/conversations"
             onMouseEnter={() => handleHoverConversations(true)}
             onMouseLeave={() => handleHoverConversations(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
@@ -102,7 +104,7 @@ const Navbar = () => {
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Conversations
             </p>
-          </button>
+          </a>
           {hoverConversations && (
             <div className="bg-slate-600 fixed z-10 top-[106px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
