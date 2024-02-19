@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import ProfilePicture from "../../shared/assets/424553395_1449727305637474_636083031125237822_n.jpg";
+
 const { default: Home } = require("../../shared/icons/home-04-white.svg");
 const {
   default: Conversations,
@@ -17,6 +19,7 @@ const Navbar = () => {
   const [hoverConversations, setHoverConversations] = useState(false);
   const [hoverNotifications, setHoverNotifications] = useState(false);
   const [hoverProfile, setHoverProfile] = useState(false);
+  const [expandProfile, setExpandProfile] = useState(false);
   const [hoverSettings, setHoverSettings] = useState(false);
 
   const handleHoverHome = (boolean) => {
@@ -30,6 +33,9 @@ const Navbar = () => {
   };
   const handleHoverProfile = (boolean) => {
     setHoverProfile(boolean);
+  };
+  const handleExpandProfile = () => {
+    setExpandProfile(!expandProfile);
   };
   const handleHoverSettings = (boolean) => {
     setHoverSettings(boolean);
@@ -155,6 +161,7 @@ const Navbar = () => {
       <div className="flex flex-col gap-2 items-start justify-center lg:justify-start w-full">
         <div className="relative">
           <button
+            onClick={handleExpandProfile}
             onMouseEnter={() => handleHoverProfile(true)}
             onMouseLeave={() => handleHoverProfile(false)}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
@@ -185,6 +192,92 @@ const Navbar = () => {
               <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
                 Your space to manage your profile
               </p>
+            </div>
+          )}
+          {expandProfile && (
+            <div className="bg-slate-600 fixed z-10 bottom-[106px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[320px] shadow-2xl shadow-black/10 rounded-lg p-4">
+              <div className="flex flex-col w-full h-auto gap-0 mt-0">
+                <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0 mb-2">
+                  Your Profile
+                </p>
+                <div className="bg-transparent flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg mb-2">
+                  <img
+                    className="aspect-square rounded-full"
+                    src={ProfilePicture}
+                    width="48"
+                    height="48"
+                    alt="ProfilePicture"
+                  />
+                  <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                    <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Ras M.
+                    </p>
+                    <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Available
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-transparent transition-all hover:bg-white/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
+                  <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                    <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Name
+                    </p>
+                    <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Ras M.
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-transparent transition-all hover:bg-white/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
+                  <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                    <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Bio
+                    </p>
+                    <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Available
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col w-full h-auto gap-0 mt-4">
+                <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0 mb-2">
+                  Security
+                </p>
+                <div className="bg-transparent transition-all hover:bg-white/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
+                  <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                    <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Email
+                    </p>
+                    <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                      enhasya@outlook.co.id
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-transparent transition-all hover:bg-white/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
+                  <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                    <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Password
+                    </p>
+                    <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                      ******
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col w-full h-auto gap-0 mt-4">
+                <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0 mb-2">
+                  Accessibility
+                </p>
+                <div className="bg-transparent transition-all hover:bg-white/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
+                  <div className="flex flex-col w-full h-auto gap-0 p-0 mt-0">
+                    <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
+                      Language
+                    </p>
+                    <p className="text-white/60 font-medium text-xs text-start tracking-tight leading-relaxed mt-0">
+                      en-US
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>

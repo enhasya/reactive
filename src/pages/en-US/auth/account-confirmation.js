@@ -5,7 +5,7 @@ const {
   default: ArrowLeft,
 } = require("../../../shared/icons/arrow-left-sm-white.svg");
 const {
-  default: YourName,
+  default: Name,
 } = require("../../../shared/icons/user-profile-03-black.svg");
 const {
   default: BirthDate,
@@ -30,15 +30,15 @@ const AccountConfirmation = () => {
       </div>
       <form className="flex flex-col w-full">
         <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
-          <img src={YourName} width="14" height="14" alt="Your Name" />
+          <img src={Name} width="14" height="14" alt="Name" />
           <input
             className="bg-transparent outline-none w-full text-black font-medium text-xs tracking-tight"
             type="text"
-            placeholder="Your Name"
+            placeholder="Name"
           />
         </div>
         <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4">
-          <img src={BirthDate} width="14" height="14" alt="Your Name" />
+          <img src={BirthDate} width="14" height="14" alt="BirthDate" />
           <input
             className="bg-transparent outline-none w-full text-black font-medium text-xs tracking-tight"
             type="date"
