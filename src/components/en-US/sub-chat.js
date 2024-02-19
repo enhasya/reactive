@@ -10,17 +10,17 @@ const {
 } = require("../../shared/icons/x-02-black.svg");
 
 const SubChat = () => {
-  const [expandSection, setExpandSection] = useState({
+  const [onClickExpandSection, setOnClickExpandSection] = useState({
     addFriends: false,
     recentChats: true,
     groups: true,
     contacts: true,
   });
 
-  const handleExpandSection = (section) => {
-    setExpandSection({
-      ...expandSection,
-      [section]: !expandSection[section],
+  const handleOnClick = (section) => {
+    setOnClickExpandSection({
+      ...onClickExpandSection,
+      [section]: !onClickExpandSection[section],
     });
   };
 
@@ -59,7 +59,7 @@ const SubChat = () => {
             </p>
           </button>
           <button
-            onClick={() => handleExpandSection("addFriends")}
+            onClick={() => handleOnClick("addFriends")}
             className="flex flex-row gap-2 items-center justify-center hover:underline"
           >
             <p className="text-slate-600 font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
@@ -68,7 +68,7 @@ const SubChat = () => {
           </button>
         </div>
       </div>
-      {expandSection.addFriends && (
+      {onClickExpandSection.addFriends && (
         <div className="bg-black/5 transition-all flex flex-row gap-4 w-full items-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-2 mb-2">
           <input
             className="bg-transparent outline-none w-full text-black font-medium text-xs tracking-tight"
@@ -77,7 +77,7 @@ const SubChat = () => {
           />
           <img src={AddFriend} width="14" height="14" alt="AddFriend" />
           <img
-            onClick={() => handleExpandSection("addFriends")}
+            onClick={() => handleOnClick("addFriends")}
             src={CloseAddFriend}
             width="14"
             height="14"
@@ -91,15 +91,15 @@ const SubChat = () => {
             Recent Chats
           </p>
           <button
-            onClick={() => handleExpandSection("recentChats")}
+            onClick={() => handleOnClick("recentChats")}
             className="flex flex-row gap-2 items-center justify-center hover:underline"
           >
             <p className="text-slate-600 font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-              {expandSection.recentChats ? "Collapse" : "Expand"}
+              {onClickExpandSection.recentChats ? "Collapse" : "Expand"}
             </p>
           </button>
         </div>
-        {expandSection.recentChats && (
+        {onClickExpandSection.recentChats && (
           <React.Fragment>
             <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
@@ -144,15 +144,15 @@ const SubChat = () => {
             Groups
           </p>
           <button
-            onClick={() => handleExpandSection("groups")}
+            onClick={() => handleOnClick("groups")}
             className="flex flex-row gap-2 items-center justify-center hover:underline"
           >
             <p className="text-slate-600 font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-              {expandSection.groups ? "Collapse" : "Expand"}
+              {onClickExpandSection.groups ? "Collapse" : "Expand"}
             </p>
           </button>
         </div>
-        {expandSection.groups && (
+        {onClickExpandSection.groups && (
           <React.Fragment>
             <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img
@@ -197,15 +197,15 @@ const SubChat = () => {
             Contacts
           </p>
           <button
-            onClick={() => handleExpandSection("contacts")}
+            onClick={() => handleOnClick("contacts")}
             className="flex flex-row gap-2 items-center justify-center hover:underline"
           >
             <p className="text-slate-600 font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
-              {expandSection.contacts ? "Collapse" : "Expand"}
+              {onClickExpandSection.contacts ? "Collapse" : "Expand"}
             </p>
           </button>
         </div>
-        {expandSection.contacts && (
+        {onClickExpandSection.contacts && (
           <React.Fragment>
             <div className="bg-transparent transition-all hover:bg-black/10 flex flex-row w-full h-auto items-center gap-4 p-2 rounded-lg">
               <img

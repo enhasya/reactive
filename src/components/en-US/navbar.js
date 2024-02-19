@@ -15,30 +15,34 @@ const {
 const { default: Settings } = require("../../shared/icons/gear-white.svg");
 
 const Navbar = () => {
-  const [hoverHome, setHoverHome] = useState(false);
-  const [hoverConversations, setHoverConversations] = useState(false);
-  const [hoverNotifications, setHoverNotifications] = useState(false);
-  const [hoverProfile, setHoverProfile] = useState(false);
-  const [expandProfile, setExpandProfile] = useState(false);
-  const [hoverSettings, setHoverSettings] = useState(false);
+  const [onClickExpandSection, setOnClickExpandSection] = useState({
+    home: false,
+    conversations: false,
+    notifications: false,
+    profile: false,
+    settings: false,
+  });
 
-  const handleHoverHome = (boolean) => {
-    setHoverHome(boolean);
+  const [onHoverExpandSection, setOnHoverExpandSection] = useState({
+    home: false,
+    conversations: false,
+    notifications: false,
+    profile: false,
+    settings: false,
+  });
+
+  const handleOnClick = (section) => {
+    setOnClickExpandSection({
+      ...onClickExpandSection,
+      [section]: !onClickExpandSection[section],
+    });
   };
-  const handleHoverConversations = (boolean) => {
-    setHoverConversations(boolean);
-  };
-  const handleHoverNotifications = (boolean) => {
-    setHoverNotifications(boolean);
-  };
-  const handleHoverProfile = (boolean) => {
-    setHoverProfile(boolean);
-  };
-  const handleExpandProfile = () => {
-    setExpandProfile(!expandProfile);
-  };
-  const handleHoverSettings = (boolean) => {
-    setHoverSettings(boolean);
+
+  const handleOnHover = (section) => {
+    setOnHoverExpandSection({
+      ...onHoverExpandSection,
+      [section]: !onHoverExpandSection[section],
+    });
   };
 
   return (
@@ -52,8 +56,8 @@ const Navbar = () => {
         <div className="relative">
           <a
             href="/en-US/app"
-            onMouseEnter={() => handleHoverHome(true)}
-            onMouseLeave={() => handleHoverHome(false)}
+            onMouseEnter={() => handleOnHover("home")}
+            onMouseLeave={() => handleOnHover("home")}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
             {" "}
@@ -75,7 +79,7 @@ const Navbar = () => {
               Home
             </p>
           </a>
-          {hoverHome && (
+          {onHoverExpandSection.home && (
             <div className="bg-slate-600 fixed z-10 top-[48px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Home
@@ -89,8 +93,8 @@ const Navbar = () => {
         <div className="relative">
           <a
             href="/en-US/conversations"
-            onMouseEnter={() => handleHoverConversations(true)}
-            onMouseLeave={() => handleHoverConversations(false)}
+            onMouseEnter={() => handleOnHover("conversations")}
+            onMouseLeave={() => handleOnHover("conversations")}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
             <img
@@ -111,7 +115,7 @@ const Navbar = () => {
               Conversations
             </p>
           </a>
-          {hoverConversations && (
+          {onHoverExpandSection.conversations && (
             <div className="bg-slate-600 fixed z-10 top-[106px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Conversations
@@ -124,8 +128,8 @@ const Navbar = () => {
         </div>
         <div className="relative">
           <button
-            onMouseEnter={() => handleHoverNotifications(true)}
-            onMouseLeave={() => handleHoverNotifications(false)}
+            onMouseEnter={() => handleOnHover("notifications")}
+            onMouseLeave={() => handleOnHover("notifications")}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
             <img
@@ -146,7 +150,7 @@ const Navbar = () => {
               Notifications
             </p>
           </button>
-          {hoverNotifications && (
+          {onHoverExpandSection.notifications && (
             <div className="bg-slate-600 fixed z-10 top-[164px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Notifications
@@ -161,9 +165,9 @@ const Navbar = () => {
       <div className="flex flex-col gap-2 items-start justify-center lg:justify-start w-full">
         <div className="relative">
           <button
-            onClick={handleExpandProfile}
-            onMouseEnter={() => handleHoverProfile(true)}
-            onMouseLeave={() => handleHoverProfile(false)}
+            onClick={() => handleOnClick("profile")}
+            onMouseEnter={() => handleOnHover("profile")}
+            onMouseLeave={() => handleOnHover("profile")}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
             <img
@@ -184,7 +188,7 @@ const Navbar = () => {
               Ras M.
             </p>
           </button>
-          {hoverProfile && (
+          {onHoverExpandSection.profile && (
             <div className="bg-slate-600 fixed z-10 bottom-[106px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Profile
@@ -194,7 +198,7 @@ const Navbar = () => {
               </p>
             </div>
           )}
-          {expandProfile && (
+          {onClickExpandSection.profile && (
             <div className="bg-slate-600 fixed z-10 bottom-[106px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[320px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <div className="flex flex-col w-full h-auto gap-0 mt-0">
                 <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0 mb-2">
@@ -283,8 +287,8 @@ const Navbar = () => {
         </div>
         <div className="relative">
           <button
-            onMouseEnter={() => handleHoverSettings(true)}
-            onMouseLeave={() => handleHoverSettings(false)}
+            onMouseEnter={() => handleOnHover("settings")}
+            onMouseLeave={() => handleOnHover("settings")}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
           >
             <img
@@ -305,7 +309,7 @@ const Navbar = () => {
               Settings
             </p>
           </button>
-          {hoverSettings && (
+          {onHoverExpandSection.settings && (
             <div className="bg-slate-600 fixed z-10 bottom-[48px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
                 Settings
