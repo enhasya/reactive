@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const { default: LayoutAuth } = require("../../../layouts/auth");
 const {
@@ -12,6 +13,7 @@ const {
 } = require("../../../shared/icons/logout-02-white.svg");
 
 const SignIn = () => {
+  const navigate = useNavigate();
   return (
     <LayoutAuth>
       <p className="text-black font-bold text-lg tracking-tight leading-relaxed mt-0">
@@ -43,12 +45,12 @@ const SignIn = () => {
         <hr width="full" className="mt-8" />
         <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-8">
           Join REACTIVE today!{" "}
-          <a
-            href="/en-US/auth/create"
+          <button
+            onClick={() => navigate("/en-US/auth/create")}
             className="font-bold text-blue-600 hover:underline"
           >
             Create new Account
-          </a>
+          </button>
           . Or if you're having trouble,{" "}
           <span className="font-bold text-blue-600 hover:underline">
             Recover Account

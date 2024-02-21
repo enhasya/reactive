@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const { default: LayoutAuth } = require("../../../layouts/auth");
 const {
@@ -15,15 +16,16 @@ const {
 } = require("../../../shared/icons/arrow-right-sm-white.svg");
 
 const AccountCreate = () => {
+  const navigate = useNavigate();
   return (
     <LayoutAuth>
       <div className="flex flex-row gap-4 items-center justify-start w-full">
-        <a
-          href="/"
+        <button
+          onClick={() => navigate("/")}
           className="bg-black hover:bg-black/80 transition-all p-2 rounded-full"
         >
           <img src={ArrowLeft} width="20" height="20" alt="ArrowLeft" />
-        </a>
+        </button>
         <p className="text-black font-bold text-lg tracking-tight leading-relaxed mt-0">
           Create Account
         </p>
@@ -53,15 +55,15 @@ const AccountCreate = () => {
             placeholder="Confirm Password"
           />
         </div>
-        <a
-          href="/en-US/auth/confirmation"
+        <button
+          onClick={() => navigate("/en-US/auth/confirmation")}
           className="bg-black hover:bg-black/80 transition-all flex flex-row gap-4 w-full items-center justify-center p-4 rounded-lg ring-1 ring-black/10 hover:ring-black/20 mt-4"
         >
           <p className="text-white font-bold text-xs tracking-tight leading-relaxed mt-0">
             Next
           </p>
           <img src={Next} width="14" height="14" alt="Next" />
-        </a>
+        </button>
       </form>
       <p className="text-black font-medium text-xs tracking-tight leading-relaxed mt-4 lg:mt-0">
         By creating an account, you agree to our{" "}
