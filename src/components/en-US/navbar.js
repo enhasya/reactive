@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import ProfilePicture from "../../shared/assets/424553395_1449727305637474_636083031125237822_n.jpg";
 
@@ -15,6 +16,7 @@ const {
 const { default: Settings } = require("../../shared/icons/gear-white.svg");
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [onClickExpandSection, setOnClickExpandSection] = useState({
     home: false,
     conversations: false,
@@ -54,8 +56,8 @@ const Navbar = () => {
           </p>
         </button>
         <div className="relative">
-          <a
-            href="/en-US/app"
+          <button
+            onClick={() => navigate("/en-US/app")}
             onMouseEnter={() => handleOnHover("home")}
             onMouseLeave={() => handleOnHover("home")}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
@@ -78,7 +80,7 @@ const Navbar = () => {
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Home
             </p>
-          </a>
+          </button>
           {onHoverExpandSection.home && (
             <div className="bg-slate-600 fixed z-10 top-[48px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
@@ -91,8 +93,8 @@ const Navbar = () => {
           )}
         </div>
         <div className="relative">
-          <a
-            href="/en-US/conversations"
+          <button
+            onClick={() => navigate("/en-US/conversations")}
             onMouseEnter={() => handleOnHover("conversations")}
             onMouseLeave={() => handleOnHover("conversations")}
             className="bg-transparent transition-all hover:bg-black/10 flex flex-row gap-2 items-center w-auto rounded-lg p-2 lg:p-4"
@@ -114,7 +116,7 @@ const Navbar = () => {
             <p className="flex lg:hidden text-white font-medium text-xs text-center tracking-tight leading-relaxed mt-0">
               Conversations
             </p>
-          </a>
+          </button>
           {onHoverExpandSection.conversations && (
             <div className="bg-slate-600 fixed z-10 top-[106px] left-[120px] hidden lg:flex flex-col gap-0 items-start w-[240px] shadow-2xl shadow-black/10 rounded-lg p-4">
               <p className="text-white font-bold text-xs text-start tracking-tight leading-relaxed mt-0">
